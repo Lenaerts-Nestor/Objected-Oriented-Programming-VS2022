@@ -8,7 +8,8 @@ namespace H6_Gevorderde_Overervingsconcepten
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-           
+           SpaarRekening pedro = new SpaarRekening();
+           Boek boek1 = new Boek();
 
         }
     }

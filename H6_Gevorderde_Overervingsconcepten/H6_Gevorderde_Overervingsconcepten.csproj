@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="H6_Geometric Figures\" />
+    <Folder Include="H6_Geometric Figures Class\" />
   </ItemGroup>
 
 </Project>
