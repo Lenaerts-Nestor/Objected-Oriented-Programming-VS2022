@@ -8,15 +8,17 @@ namespace H8_Polymorfisme.Een_eigen_huis
 {
     public class Huis
     {
-        Kamer[] MultipleKamers = new Kamer[3]; //3 kamers in totaal
-        public void BerekenPrijs()
+        public List<Kamer> KamersList { get; set; } = new List<Kamer>();
+        public int BerekenPrijs()
         {
             int Totaal = 0;
 
-            for (int i = 0; i < MultipleKamers.Length; i++)
+            foreach (var item in KamersList)
             {
-                Totaal += MultipleKamers[i].Prijs;
+                Totaal += item.Prijs;
             }
+
+            return Totaal;
         }
 
     }
@@ -24,7 +26,7 @@ namespace H8_Polymorfisme.Een_eigen_huis
     {
         public virtual int Oppervlakte { get; set; } //vierkante meter
         public virtual int Prijs { get { return 400; } }//400 euro's
-        public bool schouw { get; set; }
+        
 
     }
     public class BadKamer : Kamer
@@ -37,11 +39,12 @@ namespace H8_Polymorfisme.Een_eigen_huis
     }
     public class Salon : Kamer
     {
+        public bool SchouwAanwezig { get; set; }
         public override int Prijs
         {
             get
             {
-                if (!schouw)
+                if (!SchouwAanwezig)
                 {
                     return 500;
                 }
