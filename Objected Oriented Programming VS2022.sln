@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32414.318
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H7_Politiek", "H7_Politiek\H7_Politiek.csproj", "{10B11757-7DCB-4FF9-A9A1-9705E397E421}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H6_Gevorderde_Overervingsconcepten", "H6_Gevorderde_Overervingsconcepten\H6_Gevorderde_Overervingsconcepten.csproj", "{3BA771F6-8AF3-437B-911C-32330FE83900}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H9_Interfaces", "H8_Polymorfisme\H9_Interfaces.csproj", "{87389201-8362-444E-BBDD-A7653388814E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{3BA771F6-8AF3-437B-911C-32330FE83900}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BA771F6-8AF3-437B-911C-32330FE83900}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BA771F6-8AF3-437B-911C-32330FE83900}.Release|Any CPU.Build.0 = Release|Any CPU
-		{87389201-8362-444E-BBDD-A7653388814E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87389201-8362-444E-BBDD-A7653388814E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87389201-8362-444E-BBDD-A7653388814E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87389201-8362-444E-BBDD-A7653388814E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
