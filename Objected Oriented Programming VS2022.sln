@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H7_Politiek", "H7_Politiek\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H6_Gevorderde_Overervingsconcepten", "H6_Gevorderde_Overervingsconcepten\H6_Gevorderde_Overervingsconcepten.csproj", "{3BA771F6-8AF3-437B-911C-32330FE83900}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H9_Interfaces", "H9_Interfaces\H9_Interfaces.csproj", "{DDC9A94A-65C9-478A-B8DA-FF66D750BA30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3BA771F6-8AF3-437B-911C-32330FE83900}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BA771F6-8AF3-437B-911C-32330FE83900}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BA771F6-8AF3-437B-911C-32330FE83900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDC9A94A-65C9-478A-B8DA-FF66D750BA30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDC9A94A-65C9-478A-B8DA-FF66D750BA30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDC9A94A-65C9-478A-B8DA-FF66D750BA30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDC9A94A-65C9-478A-B8DA-FF66D750BA30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
