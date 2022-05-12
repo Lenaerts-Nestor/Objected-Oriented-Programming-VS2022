@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace H6_Gevorderde_Overervingsconcepten.H6_Geometric_Figures_Class
+﻿namespace H6_Gevorderde_Overervingsconcepten.H6_Geometric_Figures_Class
 {
     public abstract class GeometricFigure
     {
@@ -19,7 +13,7 @@ namespace H6_Gevorderde_Overervingsconcepten.H6_Geometric_Figures_Class
     }
     public class Rechthoek : GeometricFigure
     {
-        
+
         public override int BerekenOppervlakte()
         {
             return Breedte * Hoogte;
@@ -28,6 +22,7 @@ namespace H6_Gevorderde_Overervingsconcepten.H6_Geometric_Figures_Class
     }
     public class Vierkant : Rechthoek
     {
+
         public Vierkant(int HIGH, int THICK)
         {
             if (HIGH != THICK)
@@ -41,7 +36,7 @@ namespace H6_Gevorderde_Overervingsconcepten.H6_Geometric_Figures_Class
                 Breedte = THICK;
                 Hoogte = HIGH;
             }
-            
+
         }
         public Vierkant(int lengte)
         {

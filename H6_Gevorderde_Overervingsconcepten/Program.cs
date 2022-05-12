@@ -1,6 +1,6 @@
-﻿using System;
+﻿using H6_Gevorderde_Overervingsconcepten.H6_Boek;
 using H6_Gevorderde_Overervingsconcepten.H6_Money_Money;
-using H6_Gevorderde_Overervingsconcepten.H6_Boek;
+using System;
 namespace H6_Gevorderde_Overervingsconcepten
 {
     internal class Program
@@ -8,8 +8,8 @@ namespace H6_Gevorderde_Overervingsconcepten
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-           SpaarRekening pedro = new SpaarRekening();
-           Boek boek1 = new Boek();
+            SpaarRekening pedro = new SpaarRekening();
+            Boek boek1 = new Boek();
 
         }
     }

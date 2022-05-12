@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace H6_Gevorderde_Overervingsconcepten.H6_Money_Money
+﻿namespace H6_Gevorderde_Overervingsconcepten.H6_Money_Money
 {
 
 
     public abstract class Rekening
     {
-        
+
         private double saldo = 0;       //Het saldo van de rekening wordt in een private variabele bijgehouden
         public double Saldo
         {
@@ -23,7 +21,7 @@ namespace H6_Gevorderde_Overervingsconcepten.H6_Money_Money
         }
 
         public abstract double BerekenRente();
-  
+
 
     }
     public class BankRekening : Rekening
@@ -58,7 +56,7 @@ namespace H6_Gevorderde_Overervingsconcepten.H6_Money_Money
         {
 
             int aantal1000 = (int)Saldo / 1000; //deze heb ik van Meneer
-            return base.BerekenRente() + aantal1000*10;
+            return base.BerekenRente() + aantal1000 * 10;
 
         }
     }
