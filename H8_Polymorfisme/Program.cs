@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace H7_Politiek
+namespace H8_Polymorfisme
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {

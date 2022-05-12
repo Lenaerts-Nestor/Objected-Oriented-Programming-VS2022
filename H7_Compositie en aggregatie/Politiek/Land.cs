@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace H7_Politiek
+namespace H7_Compositie_en_aggregatie.Politiek
 {
-    public class Land
+    class Land
     {
 
         //compositieobjecten zijn private
@@ -73,20 +76,5 @@ namespace H7_Politiek
             }
 
         }
-
-    }
-    public class Minister
-    {
-        public string Naam { get; set; }
-    }
-    public class President : Minister
-    {
-        public int Teller { get; private set; } = 4; //die start op 4
-
-        public void JaarVerder()
-        {
-            Teller--; //dit is zoals teller - 1;
-        }
-
     }
 }
