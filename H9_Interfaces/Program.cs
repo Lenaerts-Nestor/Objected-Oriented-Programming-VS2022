@@ -8,54 +8,58 @@ namespace H9_Interfaces
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Ik gebruik geen as want allemaal zijn relationeerd met IcarbonFootprint interface
 
 
-
-            //Oefening Tonen:
-            //creer een lijst met de objecten en Toon ze:
-
-            ///Kleine Uitleg: ik gebruik ICarbonFootPrint want ik wil de methodes dervan gebruiken.
-            ///Je hebt verschillende klasses met verschillende properties en zelf mischien methodes daarin. Het zal veel errors/bugs geven als je een klasse kiest die niet Hoofdparent of Interface is. (Polymorfisme!!)
-            List<ICarbonFootPrint> footprints = new List<ICarbonFootPrint>()
+            //Manier 1:
+            List<ICarbonFootPrint> listvanstuff = new List<ICarbonFootPrint>()
             {
-                //twee huizen: 
-                new Huis(){ KubiekMeters =45, Naam = "pedro" },
-                new Huis(){ KubiekMeters = 90, Naam = "Jonatan" },
-                 //twee Fabrieken:
-                new Fabriek(){AantalWerknemers = 132, FabriekNaam = "Bol.com"},
-                new Fabriek(){AantalWerknemers =700, FabriekNaam = "AppelFabriek"}
+                new Huis(){Eigenaar = "Nestor", Volume = 45},
+                new Huis(){Eigenaar = "Nestor", Volume = 90},
+
+                new Fabriek(){FabriekNaam = "appel", Werknemers = 132},
+                new Fabriek(){FabriekNaam = "China", Werknemers = 700}
             };
 
-
-
-
-            //Deze manier werk ook
-            /*
-
-              var lijstmetobjjecten = new List<ICarbonFootPrint>()
+            for (int i = 0; i < listvanstuff.Count; i++)
             {
-
-                //twee huizen: 
-                new Huis(){ KubiekMeters =45, Naam = "pedro" },
-                new Huis(){ KubiekMeters = 90, Naam = "Jonatan" },
-                 //twee Fabrieken:
-                new Fabriek(){AantalWerknemers = 132, FabriekNaam = "Bol.com"},
-                new Fabriek(){AantalWerknemers =700, FabriekNaam = "AppelFabriek"}
-
-            };
-
-
-
-             */
-
-            foreach (var item in footprints)
-            {
-                item.BevragenVanFootprint();
-
-
+                if (listvanstuff[i] is Fabriek)
+                {
+                    listvanstuff[i].FootprintVragen();
+                }
+                else
+                {
+                    Console.WriteLine("dit is geen fabriek");
+                }
             }
 
+
+            //Manier 2: 
+            var lijstmetobjjecten = new List<ICarbonFootPrint>()
+            {
+               
+                new Huis(){ Volume =45, Eigenaar = "pedro" },
+                new Huis(){ Volume = 90, Eigenaar = "Jonatan" },
+                 
+                new Fabriek(){Werknemers = 132, FabriekNaam = "Bol.com"},
+                new Fabriek(){Werknemers =700, FabriekNaam = "AppelFabriek"}
+            };
+
+
+            Console.WriteLine("\n\n");
+
+            for (int i = 0; i < lijstmetobjjecten.Count; i++)
+            {
+                if (lijstmetobjjecten[i] is Huis)
+                {
+                    lijstmetobjjecten[i].FootprintVragen();
+                }
+                else
+                {
+                    Console.WriteLine("dit is geen huis");
+                }
+
+            }
 
         }
     }

@@ -8,22 +8,22 @@ namespace H9_Interfaces.Carbon_Footprint
 {
     public class Fabriek : ICarbonFootPrint
     {
-        public string FabriekNaam { get; set; }
-        public int AantalWerknemers { get; set; }
-        public int BerekenFootprint()
+        public string FabriekNaam { get; set; } = "Geen Naam";
+        public int Werknemers { get; set; }
+        public int Factor { get; set; } = 100;
+        public int BerekenFootPrint()
         {
-            return AantalWerknemers * 100;
+            return Werknemers * Factor;
+        }
+        public void FootprintVragen()
+        {
+            Console.WriteLine($"Het Huis van {FabriekNaam} heeft een Footprint van {BerekenFootPrint()}");
+
         }
 
-        public void BevragenVanFootprint()
-        {
-            Console.WriteLine($"Fabriek {FabriekNaam} uw Footprint is: {BerekenFootprint()} cubische meters");
-        }
-
-        //verlaagFootprint laat ik effe leeg:
         public void VerlaagFootprint()
         {
-            throw new NotImplementedException();
+            Factor -= 10;
         }
     }
 }

@@ -9,34 +9,34 @@ namespace H9_Interfaces.Carbon_Footprint
     public enum Merk { Audi, Toyota, Mercedes, Onbekend } //zet het public
     public class Auto : ICarbonFootPrint
     {
-        //hier zal ik een Enum gebruiken: zelf gekozen om mijn skils te oefenen:
-        //en het is ook logische denk ik:
-        public Merk MerkVanAuto { get; set; }
-        public int BerekenFootprint()
+        public string Eigenaar { get; set; } = "onbekend";
+        public Merk MijnMerk { get; set; }
+        public int MyProperty { get; set; }
+        public int BerekenFootPrint()
         {
-            //ik heb het volgende gedaan. ik zet in verbruik van auto als ze audi hebben als merk dat het waarde 45 zal zijn.
-            //nu VerbruikVanAuto heeft het waarde 45 en deze waarde kan ik returneren.
-            int VerbruikVanAuto = MerkVanAuto switch
+            MyProperty = MijnMerk switch
             {
                 Merk.Audi => 45,
-                Merk.Toyota => 37,
-                Merk.Mercedes => 25,
-                Merk.Onbekend => int.MinValue,
+                Merk.Toyota => 30,
+                Merk.Mercedes => 20,
+                Merk.Onbekend => 0,
                 _ => throw new NotImplementedException()
-
             };
+            return MyProperty;
 
-            return VerbruikVanAuto;         //return het waarde in getalen;
+
         }
 
-        public void BevragenVanFootprint()
+        public void FootprintVragen()
         {
-            Console.WriteLine($" Uw auto {MerkVanAuto} heeft een FootPrint van : {BerekenFootprint()} cubische meters");
+            Console.WriteLine($"de {MijnMerk} van {Eigenaar} heeft een footprint van {BerekenFootPrint()}");
         }
 
         public void VerlaagFootprint()
         {
-            throw new NotImplementedException();
+
+            //alle auto zullen 5 verlagen
+            MyProperty -= 5;
         }
     }
 }

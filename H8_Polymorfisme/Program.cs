@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using H8_Polymorfisme.Een_eigen_huis;
-using H8_Polymorfisme.Ganzenbord_single_player_edition;
+using H8_Polymorfisme.DierenTuinadvance;
 namespace H8_Polymorfisme
 {
     class Program
@@ -9,32 +9,56 @@ namespace H8_Polymorfisme
         static void Main(string[] args)
         {
 
-            //EIGEN HUIS:
-            /*
-            Huis Deurne = new Huis();
-            Deurne.KamersList.Add(new Salon() { SchouwAanwezig = true });
-            Deurne.KamersList.Add(new Gang() { Oppervlakte = 1 });
-            Deurne.KamersList.Add(new BadKamer());
-            Console.WriteLine(Deurne.BerekenPrijs());
-            */
-            //GANZENBORD:
+            Huis myHuis = new Huis();
+            myHuis.Kamers.Add(new Salon() {schouw = true });
+           
+            myHuis.Kamers.Add(new BadKamer()) ;
+            myHuis.Kamers.Add(new Kamer());
 
-            
-           HondPieza Lumi = new HondPieza();
-            Lumi.XS = 2;
-            Lumi.YS = 5;
-            
+            Console.WriteLine(myHuis.BerekenPrijs());
 
-            for (int i = 0; i < 20 ; i++)
+
+            Dier Lumi = new Hond() { Gewicht = 6};
+            Dier Juan = new Paard() { Gewicht = 170};
+            Dier lola = new Koe() { Gewicht = 300};
+
+
+            List<Dier> dieren = new List<Dier>();
+
+            dieren.Add(lola);
+            dieren.Add(Juan);
+            dieren.Add(Lumi);
+
+
+            foreach (var animal in dieren)
             {
-                if (i > 10)
-                {
-                    Lumi.Update();
-                }
-                
+                animal.Zegt();
+            }
+            
+
+            //gekozen dier laten praten
+
+            Console.WriteLine("welke dier wil je laten praten: [Hond], [Paard], [Koe]");
+            string GekozenDierId = Console.ReadLine();
+
+            switch (GekozenDierId)
+            {
+                case "Koe":
+                    foreach (var item in dieren)
+                    {
+                        if (item is Koe)
+                        {
+                            (item as Koe).Zegt();
+                        }
+                    }
+                    break;
+                //etc
+                default:
+                    break;
             }
 
-            
+
+
 
 
 
